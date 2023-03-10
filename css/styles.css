@@ -46,7 +46,7 @@ form {
     max-width: 300px;
     margin: 10px auto;
     padding: 10px 20px;
-    background: #3ab7e0;
+    background: #33a8cf;
     border-radius: 15px;
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(20px);
@@ -73,13 +73,24 @@ form {
     margin: 0 4px 8px 0;
   }
   
-  input[type="text"]::placeholder,
+  #full-name::placeholder,
   input[type="email"]::placeholder {
     text-align: right;
   }
   
   input[id="zip"] {
     max-width: 50%;
+  }
+
+  input:focus,
+  select:focus,
+  textarea[id="topics"]:focus {
+    background-color: #acf5e3;
+    transition: background-color 0.4s ease;
+  }
+
+  option {
+    font-weight: bold;
   }
 
   #html-news,
@@ -118,9 +129,10 @@ form {
     border-radius: 5px;
     width: 100%;
     border: 1px solid #545dd8;
-    border-width: 1px 1px 3px;
+    border-width: 2px 1px 3px;
     box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
     margin-bottom: 10px;
+    transition: font-size 0.2s ease-in-out;
   }
 
   button:hover {
@@ -202,11 +214,6 @@ form {
 
       .d7 input {
         margin-left: 105px;
-      }
-
-      input:focus,
-      textarea[id="topics"]:focus {
-        background-color: #79f5b7;
       }
 
       #topics {
